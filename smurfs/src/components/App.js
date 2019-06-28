@@ -14,11 +14,12 @@ class App extends Component {
     this.props.deleteSmurf(index)
 }
   render() {
+    console.log('App return', this.props.smurfs)
     return (
       <div className="App">
          <h1> I don't give a Redux </h1>
         <InputForm />
-        <SmurfList delete={this.deleteItem} smurfs={this.props.smurfs}/>
+        <SmurfList delete={this.deleteSmurf} smurfs={this.props.smurfs}/>
       </div>
     );
   }
