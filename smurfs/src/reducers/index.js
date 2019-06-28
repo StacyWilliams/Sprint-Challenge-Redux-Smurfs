@@ -1,13 +1,14 @@
 /*
   Be sure to import in all of the action types from `../actions`
 */
-import {FETCHING, SUCCESS, FAILURE, ADDING} FROM '../actions';
+import {FETCHING, SUCCESS, FAILURE, ADDING, DELETING} from '../actions';
 
 const initialState = {
   smurfs: [],
   fetching: false,
   addingSmurf: false,
-  updatingSMurf: false,
+  updatingSmurf: false,
+  deletingSmurf: false,
   err:null
   
 }
@@ -19,12 +20,15 @@ const initialState = {
   Components can then read your store as, `state` and not `state.fooReducer`.
 */
 
-export const reducer =(state= initialState, action) => {
+export const reducer = (state = initialState, action) => {
   switch(action.type){
     case FETCHING:
        return {...state,
        fetching:true}
     case ADDING:
+       return {...state,
+       fetching:true}
+    case DELETING:
        return {...state,
        fetching:true}
     case SUCCESS:
